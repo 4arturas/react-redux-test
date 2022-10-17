@@ -5,6 +5,13 @@ import type { RootState } from '../../app/store'
 export const fetchUser = createAsyncThunk('user/fetchUser', async () => {
     // const response = await userAPI.fetchUser()
     // return response.data
+    // const res = await axios.get('https://httpbin.org/get', { params: { answer: 42 } });
+    await fetch("https://httpbin.org/get", {
+        method: "GET"
+    });
+
+
+    // res.data.args;
     return "John Smith"
 })
 
