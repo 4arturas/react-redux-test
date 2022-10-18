@@ -6,6 +6,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
+// Start the mocking conditionally.
+if (process.env.NODE_ENV === 'development')
+{
+    const { worker } = require('./mocks/browser')
+    worker.start()
+}
+
+
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 

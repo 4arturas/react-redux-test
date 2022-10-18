@@ -2,10 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import {LoginForm} from "./features/login/LoginForm";
 
 function App() {
   return (
     <div className="App">
+      <br/>
+      <LoginForm/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
